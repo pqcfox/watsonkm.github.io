@@ -1,98 +1,153 @@
+$bg-color: #eaecef;
+$text-color: #202124;
+$link-color: #ea3113;
+
+$name-font-sizes: (null: 2.5em, 600px: 3.5em, 768px: 4em, 992px: 4.5em, 1200px: 5em);
+
+$text-font-sizes: (null: 0.9em, 600px: 1.2em, 768px: 1.3em, 992px: 1.4em, 1200px: 1.5em);
+
+$bullet-font-sizes: (null: 2em, 600px: 2em, 768px: 2em, 992px: 2em, 1200px: 2em);
+
+$tasks-widths: (null: 70vw, 600px: 22em, 768px: 22em, 992px: 22em, 1200px: 25em);
+
+@mixin font-size-respond($font-sizes) {
+    @each $screen-width, $size in $font-sizes {
+        @if $screen-width == null {
+            font-size: $size;
+        }
+        @else {
+            @media screen and (min-width: $screen-width) {
+                font-size: $size;
+            }
+        }
+    }
+}
+
+@mixin width-respond($widths) {
+    @each $screen-width, $width in $widths {
+        @if $screen-width == null {
+            width: $width;
+        }
+        @else {
+            @media screen and (min-width: $screen-width) {
+                width: $width;
+            }
+        }
+    }
+}
+
 body {
-  background-color: #eaecef;
-  font-family: 'Titillium Web', sans-serif;
-  color: #202124;
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 a {
-  color: #ea3113
+    color: $link-color;
 }
 
 .name {
-  text-align: center;
-  font-size: 5em;
-  margin-top: 0.2em;
-  margin-bottom: 0em;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0em;
+
+    @include font-size-respond($name-font-sizes);
 }
 
 .title {
-  text-align: center;
-  font-size: 1.5em;
-  margin: 0;
+    text-align: center;
+    margin: 0;
+
+    @include font-size-respond($text-font-sizes);
 }
 
 .tasks {
-  margin: 3em auto;
-  width: 44em; 
-  ul {
-    font-size: 1.5em;
-    list-style-type: none;
-    padding-left: 0;
-    padding-right: 1.5em;
-    text-align: left;
-    li {
-      margin: 1.2em;
-      &:before {
-        font-family: 'FontAwesome';
-        font-size: 2em;
-        float: left;
-        text-align: center;
-        width: 2.5em;
-        margin-top: 0.25em;
-      }
-    }
-    
-    li.pqc:before {
-      content: "\f577";
-    }
+    margin: 2em auto;
+    padding-left: 4em;
 
-    li.drug:before {
-      content: "\f484";
-    }
+    @include font-size-respond($text-font-sizes);
+    @include width-respond($tasks-widths);
 
-    li.honors:before {
-      content: "\f19d";
-    }
+    ul {
+        list-style-type: none;
 
-    li.gkm:before { 
-      content: "\f5cb";
-    }
+        // padding-left: 0;
+        // padding-right: 1.5em;
+        // text-align: left;
 
-    li.dna:before {
-      content: "\f471";
-    }
+        li {
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
 
-    li.leja:before {
-      content: "\f141";
-    }
+            margin: 1em 0;
 
-    li.eye:before {
-      content: "\f06e";
-    }
+            &:before {
+                display: inline-block;
+                font-family: 'FontAwesome';
 
-    li.rocket:before {
-      content: "\f135";
-    }
+                @include font-size-respond($bullet-font-sizes);
 
-    li.lock:before {
-      content: "\f13e";
-    }
+                text-align: center;
+                vertical-align: middle;
+                margin: 0 1em 0 -2.5em;
+                width: 1em;
+            }
+        }
 
-    li.rover:before {
-      content: "\f63c";
-    }
+        li.pqc:before {
+            content: "\f577";
+        }
 
-    li.hack:before {
-      content: "\f233";
-    }
+        li.drug:before {
+            content: "\f484";
+        }
 
-    li.flag:before {
-      content: "\f024";
+        li.honors:before {
+            content: "\f19d";
+        }
+
+        li.gkm:before {
+            content: "\f5cb";
+        }
+
+        li.dna:before {
+            content: "\f471";
+        }
+
+        li.leja:before {
+            content: "\f141";
+        }
+
+        li.eye:before {
+            content: "\f06e";
+        }
+
+        li.rocket:before {
+            content: "\f135";
+        }
+
+        li.lock:before {
+            content: "\f13e";
+        }
+
+        li.rover:before {
+            content: "\f63c";
+        }
+
+        li.hack:before {
+            content: "\f233";
+        }
+
+        li.flag:before {
+            content: "\f024";
+        }
     }
-  }
 }
 
 .footer {
-  text-align: center;
-  font-size: 1.2em;
+    @include font-size-respond($text-font-sizes);
+    text-align: center;
 }
