@@ -2,13 +2,13 @@ $bg-color: #eaecef;
 $text-color: #202124;
 $link-color: #ea3113;
 
-$name-font-sizes: (null: 2.5em, 600px: 3.5em, 768px: 4em, 992px: 4.5em, 1200px: 5em);
+$name-font-sizes: (null: 3.0em, 600px: 3.5em, 768px: 4em, 992px: 4.5em, 1200px: 5em);
 
-$text-font-sizes: (null: 0.9em, 600px: 1.2em, 768px: 1.3em, 992px: 1.4em, 1200px: 1.5em);
+$text-font-sizes: (null: 1.1em, 600px: 1.2em, 768px: 1.3em, 992px: 1.4em, 1200px: 1.5em);
 
 $bullet-font-sizes: (null: 2em, 600px: 2em, 768px: 2em, 992px: 2em, 1200px: 2em);
 
-$tasks-widths: (null: 70vw, 600px: 22em, 768px: 22em, 992px: 22em, 1200px: 25em);
+$tasks-widths: (null: 80vw, 600px: 22em, 768px: 22em, 992px: 22em, 1200px: 25em);
 
 @mixin font-size-respond($font-sizes) {
     @each $screen-width, $size in $font-sizes {
@@ -150,4 +150,5 @@ a {
 .footer {
     @include font-size-respond($text-font-sizes);
     text-align: center;
+    margin: 1em;
 }
