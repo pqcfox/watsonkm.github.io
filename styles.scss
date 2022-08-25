@@ -150,5 +150,5 @@ a {
 .footer {
     @include font-size-respond($text-font-sizes);
     text-align: center;
-    margin: 1em;
+    margin: 1em 1em 2em 1em;
 }
