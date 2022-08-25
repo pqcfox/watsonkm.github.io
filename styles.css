@@ -1,0 +1,90 @@
+body {
+  background-color: #eaecef;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1.name {
+  text-align: center;
+  font-size: 64px;
+  color: #202124;
+}
+
+a {
+  color: #ea3113;
+}
+
+.tasks {
+  margin: 0 auto;
+  width: 40em;
+}
+
+.tasks ul {
+  font-size: 1.5em;
+  list-style-type: none;
+}
+
+.tasks ul li {
+  margin: 1.2em;
+  text-indent: -2em;
+}
+
+.tasks ul li:before {
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  float: left;
+  width: 2em;
+}
+
+.tasks ul li.pqc:before {
+  content: "\f577";
+}
+
+.tasks ul li.drug:before {
+  content: "\f484";
+}
+
+.tasks ul li.honors:before {
+  content: "\f19d";
+}
+
+.tasks ul li.gkm:before {
+  content: "\f5cb";
+}
+
+.tasks ul li.dna:before {
+  content: "\f471";
+}
+
+.tasks ul li.leja:before {
+  content: "\f141";
+}
+
+.tasks ul li.eye:before {
+  content: "\f06e";
+}
+
+.tasks ul li.rocket:before {
+  content: "\f135";
+}
+
+.tasks ul li.lock:before {
+  content: "\f13e";
+}
+
+.tasks ul li.rover:before {
+  content: "\f63c";
+}
+
+.tasks ul li.hack:before {
+  content: "\f233";
+}
+
+.tasks ul li.flag:before {
+  content: "\f024";
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=styles.css.map */

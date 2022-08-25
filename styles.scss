@@ -1,0 +1,86 @@
+body {
+  background-color: #eaecef;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1.name {
+  text-align: center;
+  font-size: 64px;
+  color: #202124;
+}
+
+a {
+  color: #ea3113
+}
+
+.tasks {
+  margin: 0 auto;
+  width: 40em; 
+  ul {
+    font-size: 1.5em;
+    list-style-type: none;
+    li {
+      margin: 1.2em;
+      text-indent: -2em;
+      &:before {
+        font-family: 'FontAwesome';
+        font-size: 2em;
+        float: left;
+        width: 2em;
+      }
+    }
+    
+    li.pqc:before {
+      content: "\f577";
+    }
+
+    li.drug:before {
+      content: "\f484";
+    }
+
+    li.honors:before {
+      content: "\f19d";
+    }
+
+    li.gkm:before { 
+      content: "\f5cb";
+    }
+
+    li.dna:before {
+      content: "\f471";
+    }
+
+    li.leja:before {
+      content: "\f141";
+    }
+
+    li.eye:before {
+      content: "\f06e";
+    }
+
+    li.rocket:before {
+      content: "\f135";
+    }
+
+    li.lock:before {
+      content: "\f13e";
+    }
+
+    li.rover:before {
+      content: "\f63c";
+    }
+
+    li.hack:before {
+      content: "\f233";
+    }
+
+    li.flag:before {
+      content: "\f024";
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 1.2em;
+}
