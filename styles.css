@@ -1,11 +1,6 @@
 body {
   background-color: #eaecef;
   font-family: 'Titillium Web', sans-serif;
-}
-
-h1.name {
-  text-align: center;
-  font-size: 64px;
   color: #202124;
 }
 
@@ -13,26 +8,43 @@ a {
   color: #ea3113;
 }
 
+.name {
+  text-align: center;
+  font-size: 5em;
+  margin-top: 0.2em;
+  margin-bottom: 0em;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 0;
+}
+
 .tasks {
-  margin: 0 auto;
-  width: 40em;
+  margin: 3em auto;
+  width: 44em;
 }
 
 .tasks ul {
   font-size: 1.5em;
   list-style-type: none;
+  padding-left: 0;
+  padding-right: 1.5em;
+  text-align: left;
 }
 
 .tasks ul li {
   margin: 1.2em;
-  text-indent: -2em;
 }
 
 .tasks ul li:before {
   font-family: 'FontAwesome';
   font-size: 2em;
   float: left;
-  width: 2em;
+  text-align: center;
+  width: 2.5em;
+  margin-top: 0.25em;
 }
 
 .tasks ul li.pqc:before {
